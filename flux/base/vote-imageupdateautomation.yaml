@@ -5,7 +5,7 @@ metadata:
   annotations:
     reconcile.fluxcd.io/requestedAt: "2024-12-12T12:05:51.686412587Z"
   name: instavote-all
-  namespace: flux-system
+  namespace: instavote
 spec:
   git:
     checkout:
@@ -23,5 +23,5 @@ spec:
     kind: GitRepository
     name: instavote
   update:
-    path: ./deploy/vote/staging
+    path: ./kustomize/vote/staging
     strategy: Setters

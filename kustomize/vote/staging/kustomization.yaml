@@ -4,7 +4,6 @@ resources:
 - ../base
 patchesStrategicMerge:
 - deployment.yaml
-- service.yaml
 namespace: instavote
 images:
 - name: schoolofdevops/vote
@@ -12,7 +11,7 @@ images:
   newTag: main-7d09d98c-1733763067 # {"$imagepolicy": "flux-system:vote:tag"}
 replicas:
 - name: vote
-  count: 2
+  count: 0
 commonLabels:
   project: instavote
   env: staging
